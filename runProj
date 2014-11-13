@@ -1,0 +1,5 @@
+#usage ./runProj <binary compiled via simplescalar> <config gile for the l2 cahche structures> <config file for the l3 cache strictures>
+
+./sim-cache -config $2 -redir:sim output1.out $1
+./sim-sid -config $3 -redir:sim output2.out $1
+vimdiff output1.out output2.out 
